@@ -37,6 +37,8 @@
 
   --background-tag: var(--comment);
   --text-tag: var(--background-primary);
+
+  --formating-scale-factor: 0.85;
 }
 
 .cm-s-obsidian .CodeMirror-line {
@@ -62,11 +64,11 @@ div.markdown-preview-view {
   color: var(--text);
 }
 .cm-header-1, .markdown-preview-view h1 { font-size: 1.6em; }
-.cm-header-1.cm-formatting-header { font-size: calc(0.7 * 1.6em); }
+.cm-header-1.cm-formatting-header { font-size: calc(var(--formating-scale-factor) * 1.6em); }
 .cm-header-2, .markdown-preview-view h2 { font-size: 1.4em; }
-.cm-header-2.cm-formatting-header { font-size: calc(0.7 * 1.4em); }
+.cm-header-2.cm-formatting-header { font-size: calc(var(--formating-scale-factor) * 1.4em); }
 .cm-header-3, .markdown-preview-view h3 { font-size: 1.2em; }
-.cm-header-3.cm-formatting-header { font-size: calc(0.7 * 1.2em); }
+.cm-header-3.cm-formatting-header { font-size: calc(var(--formating-scale-factor) * 1.2em); }
 .cm-header-4, .markdown-preview-view h4,
 .cm-header-5, .markdown-preview-view h5,
 .cm-header-6, .markdown-preview-view h6 {
@@ -75,7 +77,7 @@ div.markdown-preview-view {
 .cm-header-4.cm-formatting-header,
 .cm-header-5.cm-formatting-header,
 .cm-header-6.cm-formatting-header {
-  font-size: calc(0.7 * 1em);
+  font-size: calc(var(--formating-scale-factor) * 1em);
 }
 .cm-formatting-header {
   color: var(--text-faint);
