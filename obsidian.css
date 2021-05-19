@@ -140,8 +140,18 @@ div.markdown-preview-view {
 .cm-s-obsidian span.cm-quote {
   color: var(--text-normal);
 }
+.markdown-preview-view blockquote {
+  border: none;
+  margin: 0;
+  padding: 0 12px;
+  border-left: 4px solid var(--text-muted);
+  color: var(--text-muted);
+}
 
 /* codeblock */
+.cm-s-obsidian .HyperMD-codeblock {
+  color: var(--orange);
+}
 .HyperMD-codeblock.CodeMirror-line span {
   line-height: 1.5;
 }
