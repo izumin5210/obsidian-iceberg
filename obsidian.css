@@ -26,13 +26,24 @@
   --background-primary-alt: #0f1117;
   --background-secondary: #1e2132;
   --background-secondary-alt: #0f1117;
+
+  /* empty search bar */
+  --background-modifier-error-rgb: 226, 120, 120; /* same as red */
+
   --text-normal: var(--fg);
-  --text-strong: var(--brightWhite);
   --text-accent: var(--orange);
   --text-faint: var(--comment);
   --text-muted: var(--comment);
+  /* --text-error */
+  /* --text-error-hover */
+  --text-highlight-bg: var(--orange); /* TODO: tint */
+  /* --text-highlight-bg-active */
   --text-selection: var(--lblue);
+  --interactive-accent: var(--blue);
+  --text-on-accent: var(--background-primary);
+  --interactive-success: var(--green);
 
+  --text-strong: var(--brightWhite);
   --text-inline-code: var(--blue);
 
   --background-tag: var(--comment);
