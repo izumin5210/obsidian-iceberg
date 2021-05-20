@@ -10,7 +10,16 @@
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "devDependencies": {
+    "frolint": "^2.6.0",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.4"
+  },
+  "frolint": {
+    "eslint": {
+      "ignorePath": "./.eslintignore"
+    },
+    "prettier": {
+      "ignorePath": "./.prettierignore"
+    }
   }
 }
