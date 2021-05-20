@@ -97,17 +97,17 @@ div.markdown-preview-view {
 /* link */
 .cm-s-obsidian span.cm-url,
 .markdown-preview-view a {
-  color: var(--text);
+  color: var(--blue);
+}
+.cm-s-obsidian span.cm-url:hover,
+.markdown-preview-view a:hover {
+  color: var(--lblue);
 }
 .cm-formatting.cm-formatting-link-string.cm-string.cm-url {
   color: var(--text-muted);
 }
-.cm-s-obsidian span.cm-string.cm-url {
-  color: var(--blue);
-}
 
 /* emphasis */
-.cm-s-obsidian span.cm-url,
 .cm-em,
 .markdown-preview-view em {
   color: var(--text-strong);
@@ -118,7 +118,6 @@ div.markdown-preview-view {
 }
 
 /* strong */
-.cm-s-obsidian span.cm-url,
 .cm-strong,
 .markdown-preview-view strong {
   color: var(--text-strong);
