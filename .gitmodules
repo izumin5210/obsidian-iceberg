@@ -1,0 +1,3 @@
+[submodule "vscode-iceberg-theme"]
+	path = vscode-iceberg-theme
+	url = https://github.com/cocopon/vscode-iceberg-theme

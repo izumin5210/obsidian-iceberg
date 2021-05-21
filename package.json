@@ -1,0 +1,30 @@
+{
+  "name": "obsidian-iceberg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/izumin5210/obsidian-iceberg",
+  "author": "izumin5210 <m@izum.in>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "devDependencies": {
+    "frolint": "^2.6.0",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "frolint": {
+    "eslint": {
+      "ignorePath": "./.eslintignore"
+    },
+    "prettier": {
+      "ignorePath": "./.prettierignore"
+    }
+  },
+  "dependencies": {
+    "@types/chroma-js": "^2.1.3",
+    "@types/node": "^15.3.1",
+    "chroma-js": "^2.1.2"
+  }
+}
