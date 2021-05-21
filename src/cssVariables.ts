@@ -17,9 +17,16 @@ const baseColors = {
   brightWhite: vimPalette.ansi.brightWhite,
 } as const;
 
-type BaseColorName = keyof typeof baseColors;
+const lightColors = {
+  lightBlue: baseColors.blue.lighten(0.08),
+  lightOrange: baseColors.orange.lighten(0.08),
+} as const;
 
-const cssVar = (c: BaseColorName) => `var(--${c})`;
+type BaseColorName = keyof typeof baseColors;
+type LightColorName = keyof typeof lightColors;
+type RootColorName = BaseColorName | LightColorName;
+
+const cssVar = (c: RootColorName) => `var(--${c})`;
 
 export const cssVariablesThemeDark = (): Record<string, string> => {
   const predefinedColors: Record<string, string> = {
@@ -37,12 +44,12 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
     // "background-modifier-error-hover"
     // "background-modifier-cover"
     "text-accent": cssVar("orange"),
-    // "text-accent-hover"
+    "text-accent-hover": cssVar("lightOrange"),
     "text-normal": cssVar("white"),
     "text-muted": cssVar("brightBlack"),
     // "text-muted-rgb"
     "text-faint": cssVar("brightBlack"),
-    // "text-error"
+    "text-error": cssVar("red"),
     // "text-error-hover"
     "text-highlight-bg": cssVar("orange"), // TODO: tint
     // "text-highlight-bg-active"
@@ -51,8 +58,8 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
     // "interactive-normal"
     // "interactive-hover"
     "interactive-accent": cssVar("blue"),
-    // "interactive-accent-rgb"
-    // "interactive-accent-hover"
+    // "interactive-accent-gb"
+    "interactive-accent-hover": cssVar("lightBlue"),
     "interactive-success": cssVar("green"),
     // "scrollbar-active-thumb-bg"
     // "scrollbar-bg"
@@ -64,7 +71,8 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
     "text-strong": cssVar("brightWhite"),
     "text-inline-code": cssVar("blue"),
     "background-tag": cssVar("brightBlack"),
-    "text-tag": cssVar("blue"),
+    "background-tag-hover": baseColors.brightBlack.lighten(0.08).hex(),
+    "text-tag": cssVar("black"),
     "background-block-cursor": cssVar("white"),
   };
 
@@ -72,10 +80,13 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
 };
 
 export const cssVariablesRoot = (): Record<string, string> => {
-  const vars = {} as Record<BaseColorName, string>;
+  const vars = {} as Record<RootColorName, string>;
 
-  for (const key of Object.keys(baseColors)) {
-    vars[key as BaseColorName] = baseColors[key as BaseColorName].hex();
+  for (const key of Object.keys(baseColors) as BaseColorName[]) {
+    vars[key] = baseColors[key].hex();
+  }
+  for (const key of Object.keys(lightColors) as LightColorName[]) {
+    vars[key] = lightColors[key].hex();
   }
 
   return vars;
