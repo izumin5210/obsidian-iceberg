@@ -65,6 +65,7 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
     "text-inline-code": cssVar("blue"),
     "background-tag": cssVar("brightBlack"),
     "text-tag": cssVar("blue"),
+    "background-block-cursor": cssVar("white"),
   };
 
   return Object.assign({}, predefinedColors, additionalColors);

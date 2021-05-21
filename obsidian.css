@@ -44,6 +44,7 @@
   --text-inline-code: var(--blue);
   --background-tag: var(--brightBlack);
   --text-tag: var(--blue);
+  --background-block-cursor: var(--white);
   /* DARK_COLORS_END */
 }
 
@@ -208,7 +209,7 @@ div.markdown-preview-view {
 .cm-fat-cursor .CodeMirror-cursor,
 .cm-animate-fat-cursor {
   font-family: monospace;
-  background-color: var(--fg);
+  background-color: var(--background-block-cursor);
   opacity: 0.6;
 }
 
