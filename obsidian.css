@@ -41,7 +41,7 @@
   --text-muted: var(--brightBlack);
   --text-faint: var(--brightBlack);
   --text-error: var(--red);
-  --text-highlight-bg: var(--orange);
+  --text-highlight-bg: #e2a47880;
   --text-selection: var(--lblue);
   --text-on-accent: var(--black);
   --interactive-accent: var(--blue);

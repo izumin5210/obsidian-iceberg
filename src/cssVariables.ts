@@ -51,7 +51,7 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
     "text-faint": cssVar("brightBlack"),
     "text-error": cssVar("red"),
     // "text-error-hover"
-    "text-highlight-bg": cssVar("orange"), // TODO: tint
+    "text-highlight-bg": baseColors.orange.withAlpha(0.5).hex(),
     // "text-highlight-bg-active"
     "text-selection": cssVar("lblue"),
     "text-on-accent": cssVar("black"),
