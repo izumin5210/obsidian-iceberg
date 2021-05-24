@@ -32,6 +32,8 @@
   --background-primary-alt: #0f1117;
   --background-secondary: var(--black);
   --background-secondary-alt: #0f1117;
+  --background-modifier-success: var(--green);
+  --background-modifier-error: var(--red);
   --background-modifier-error-rgb: 226, 120, 120;
   --text-accent: var(--orange);
   --text-accent-hover: var(--lightOrange);

@@ -38,8 +38,8 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
     // "background-modifier-form-field"
     // "background-modifier-form-field-highlighted"
     // "background-modifier-box-shadow"
-    // "background-modifier-success"
-    // "background-modifier-error"
+    "background-modifier-success": cssVar("green"),
+    "background-modifier-error": cssVar("red"),
     "background-modifier-error-rgb": Chroma(baseColors.red.hex()).rgb().join(", "),
     // "background-modifier-error-hover"
     // "background-modifier-cover"
