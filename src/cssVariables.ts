@@ -58,7 +58,7 @@ export const cssVariablesThemeDark = (): Record<string, string> => {
     // "interactive-normal"
     // "interactive-hover"
     "interactive-accent": cssVar("blue"),
-    // "interactive-accent-gb"
+    "interactive-accent-rgb": Chroma(baseColors.blue.hex()).rgb().join(", "),
     "interactive-accent-hover": cssVar("lightBlue"),
     "interactive-success": cssVar("green"),
     // "scrollbar-active-thumb-bg"

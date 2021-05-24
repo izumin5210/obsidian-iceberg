@@ -45,6 +45,7 @@
   --text-selection: var(--lblue);
   --text-on-accent: var(--black);
   --interactive-accent: var(--blue);
+  --interactive-accent-rgb: 132, 160, 198;
   --interactive-accent-hover: var(--lightBlue);
   --interactive-success: var(--green);
   --text-strong: var(--brightWhite);
