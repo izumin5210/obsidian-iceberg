@@ -133,17 +133,17 @@ div.markdown-preview-view {
 }
 
 /* list */
-.cm-formatting.cm-formatting-list {
+.cm-formatting.cm-formatting-list:not(.cm-whitespace) {
   margin-right: 8px;
 }
 
-.cm-formatting.cm-formatting-list.cm-formatting-list-ul {
+.cm-formatting.cm-formatting-list:not(.cm-whitespace).cm-formatting-list-ul {
   position: relative;
   visibility: hidden;
   margin-right: 8px;
 }
 
-.cm-formatting.cm-formatting-list.cm-formatting-list-ul::before {
+.cm-formatting.cm-formatting-list:not(.cm-whitespace).cm-formatting-list-ul::before {
   content: ' ';
   background-color: var(--blue);
   display: inline-block;
@@ -152,15 +152,21 @@ div.markdown-preview-view {
   height: 6px;
 }
 
-.cm-formatting.cm-formatting-list.cm-formatting-list-ul::before {
+.cm-formatting.cm-formatting-list:not(.cm-whitespace).cm-formatting-list-ul::before {
   inset: 0 auto;
   position: absolute;
   margin: auto;
   visibility: visible;
 }
 
-.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+.cm-formatting.cm-formatting-list:not(.cm-whitespace).cm-formatting-list-ol {
   color: var(--blue);
+}
+
+/* hide whitespace chars before list items */
+/* for https://github.com/deathau/cm-show-whitespace-obsidian */
+.cm-hmd-list-indent.cm-overlay.cm-whitespace {
+  visibility: hidden;
 }
 
 .markdown-preview-view ul {
