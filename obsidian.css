@@ -206,9 +206,12 @@ div.markdown-preview-view {
 .HyperMD-codeblock.CodeMirror-line span {
   line-height: 1.5;
 }
-.cm-s-obsidian pre.HyperMD-codeblock {
-  padding: 0px 16px 0px 16px;
+
+/* .cm-s-obsidian .cm-hmd-codeblock { */
+.cm-s-obsidian pre.HyperMD-codeblock > span[role="presentation"] {
+  padding: 0 16px;
 }
+
 .cm-s-obsidian pre.HyperMD-codeblock-begin {
   padding-top: 8px;
   padding-bottom: 8px;
