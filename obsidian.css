@@ -132,6 +132,53 @@ div.markdown-preview-view {
   color: var(--text-faint);
 }
 
+/* list */
+.cm-formatting.cm-formatting-list {
+  margin-right: 8px;
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ul {
+  position: relative;
+  visibility: hidden;
+  margin-right: 8px;
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ul::before {
+  content: ' ';
+  background-color: var(--blue);
+  display: inline-block;
+  border-radius: 9999vh;
+  width: 6px;
+  height: 6px;
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ul::before {
+  inset: 0 auto;
+  position: absolute;
+  margin: auto;
+  visibility: visible;
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+  color: var(--blue);
+}
+
+.markdown-preview-view ul {
+  padding-left: 16px;
+}
+
+.markdown-preview-view ul > li > p {
+  margin: 0;
+}
+
+.markdown-preview-view ul li {
+  padding-top: 0.3em;
+}
+
+.markdown-preview-view ul li::marker {
+  color: var(--blue);
+}
+
 /* blockquote */
 .HyperMD-quote.HyperMD-quote-1.CodeMirror-line {
   border-left: 4px solid var(--text-muted);
